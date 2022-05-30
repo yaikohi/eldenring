@@ -10,7 +10,7 @@ export default function handler(
   if (!name) {
     return res
       .status(400)
-      .send('you must provide a name in order to find an armor piece')
+      .send('You must provide a name in order to find an armor piece')
   }
 
   const findArmor = armorData.find((armor) => armor.name === req.query.name)
