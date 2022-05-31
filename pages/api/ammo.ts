@@ -13,7 +13,9 @@ export default function handler(
       .send('you must provide a name in order to find an ammo piece')
   }
 
-  const findAmmo = ammoData.find((ammo) => ammo.name === req.query.name)
+  const findAmmo = ammoData.find(
+    (ammo) => ammo.name === req.query.name,
+  )
 
   res.setHeader('Content-Type', 'application/json')
 

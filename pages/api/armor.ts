@@ -13,7 +13,9 @@ export default function handler(
       .send('You must provide a name in order to find an armor piece')
   }
 
-  const findArmor = armorData.find((armor) => armor.name === req.query.name)
+  const findArmor = armorData.find(
+    (armor) => armor.name === req.query.name,
+  )
 
   res.setHeader('Content-Type', 'application/json')
 

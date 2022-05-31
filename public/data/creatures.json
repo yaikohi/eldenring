@@ -85,7 +85,12 @@
     "image": "https://eldenring.fanapis.com/images/creatures/17f69edd929l0i6yt0z56hlzhtjwzu.png",
     "description": "Deer roam freely in the plains on Limgrave, now that hunters have all but disappeared",
     "location": "West Limgrave, South West Liurnia of The Lakes",
-    "drops": ["Thin Animal Bones", "Sliver of Meat", "Beast Liver", "6 Runes"]
+    "drops": [
+      "Thin Animal Bones",
+      "Sliver of Meat",
+      "Beast Liver",
+      "6 Runes"
+    ]
   },
   {
     "id": "17f69dccb97l0i6yt6w0ys92ic7km6p",
@@ -133,7 +138,11 @@
     "image": "https://eldenring.fanapis.com/images/creatures/17f6a2f96a7l0i6ytu14rxjb7bw7x9.png",
     "description": "Giant Land Octopuses are a dangerous foe for any daring to visit the beaches of Limgrave.",
     "location": "Commonly found in watery areas",
-    "drops": ["Land Octopus Ovary", "Strip of White Flesh", "187~336 Runes"]
+    "drops": [
+      "Land Octopus Ovary",
+      "Strip of White Flesh",
+      "187~336 Runes"
+    ]
   },
   {
     "id": "17f69d7f00al0i6ytxittgv1hoa7vg",
@@ -229,7 +238,12 @@
     "image": "https://eldenring.fanapis.com/images/creatures/17f6a55a3a8l0i6yvd9wioasyfq39c.png",
     "description": "Giant rats plague the mines and caves of Limgrave, spreading diseases where they go",
     "location": "Limgrave Tunnels, Ailing Village, Tombsward Cave",
-    "drops": ["Pauper's Rune", "Rune Arc", "Golden Rune (1)", "13 Runes"]
+    "drops": [
+      "Pauper's Rune",
+      "Rune Arc",
+      "Golden Rune (1)",
+      "13 Runes"
+    ]
   },
   {
     "id": "17f6a26dde8l0i6yvhv0sfaca0cp78l",
@@ -253,7 +267,12 @@
     "image": "https://eldenring.fanapis.com/images/creatures/17f6a05a586l0i6yvqntjzd6hpa4jl.png",
     "description": "The sheep from Limgrave have long forgotten captivity, romaing the landscape freely instead.",
     "location": "in the pastures of Limgrave and Stormhill",
-    "drops": ["Thin Beast Bones", "Sliver of Meat", "Beast Liver", "6 Runes"]
+    "drops": [
+      "Thin Beast Bones",
+      "Sliver of Meat",
+      "Beast Liver",
+      "6 Runes"
+    ]
   },
   {
     "id": "17f69dc762dl0i6yvxw3r8a3zemfvb",
@@ -380,7 +399,11 @@
     "image": "https://eldenring.fanapis.com/images/creatures/17f6a10de56l0i6yygvqflqpozsvd.png",
     "description": "???",
     "location": "Volcano Manor",
-    "drops": ["316 Runes", "Furlcalling Finger Remedy", "Ghiza's Wheel"]
+    "drops": [
+      "316 Runes",
+      "Furlcalling Finger Remedy",
+      "Ghiza's Wheel"
+    ]
   },
   {
     "id": "17f69e29ac1l0i6yyt36xomtyw80pr",
@@ -396,7 +419,12 @@
     "image": null,
     "description": "Maleigh Marais's identity is completely shrouded by their mask and long robes. They are equipped with a rapier and move carefully around opponents. They are easily staggered with magic attacks such as Glintblade Phalanx.",
     "location": "Fields west of The Shaded Castle",
-    "drops": ["4,800 Runes", "Antspur Rapier", "Marais Mask", "Marais Robe"]
+    "drops": [
+      "4,800 Runes",
+      "Antspur Rapier",
+      "Marais Mask",
+      "Marais Robe"
+    ]
   },
   {
     "id": "17f6a16077el0i6yz89rtvo0b08wet",

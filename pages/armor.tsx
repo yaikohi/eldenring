@@ -1,9 +1,21 @@
-import type { NextPage } from 'next'
+import type { NextPage, InferGetStaticPropsType } from 'next'
 import { Card } from '../components/Card'
 import { Navbar } from '../components/Navbar'
-import armors from '../public/data/armor.json'
+import { Armor } from '../types/armor'
 
-const Home: NextPage = () => {
+export const getStaticProps: GetStaticProps = async () => {
+  const res = await fetch('https://eldenring.fanapis.com/api/armors')
+  const armors: Ammo[] = await res.json()
+  return {
+    props: {
+      armors,
+    },
+  }
+}
+
+const Home: NextPage<Armor[]> = ({
+  armors,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Navbar />

@@ -241,7 +241,11 @@
     "region": "Caelid",
     "description": "A large and imposing human commander who wields a halberd that doubles as a battle standard, rousing his spirit minions to battle with unquenchable fervor.",
     "location": "Caelid",
-    "drops": ["12,000 Runes", "Commander's Standard", "Unalloyed Gold Needle"],
+    "drops": [
+      "12,000 Runes",
+      "Commander's Standard",
+      "Unalloyed Gold Needle"
+    ],
     "healthPoints": "11,400"
   },
   {
@@ -352,7 +356,11 @@
     "region": "Altus Plateau",
     "description": "Massive knight clad in golden armor atop a giant horse.",
     "location": "Capital Outskirts Crumbling Farum Azula",
-    "drops": ["50,000 Runes", "Dragon Greatclaw", "Dragonclaw Shield"],
+    "drops": [
+      "50,000 Runes",
+      "Dragon Greatclaw",
+      "Dragonclaw Shield"
+    ],
     "healthPoints": "8,398"
   },
   {
@@ -645,7 +653,11 @@
     "region": "Caelid",
     "description": "The apostles, one said to serve Destined Death, are wielders of the god-slaying black flame. But after their defeat by Maliketh, the Black Blade, the source of their power was sealed away.",
     "location": "Spiritcaller's Cave",
-    "drops": ["70k Runes", "Godskin Swaddling Cloth", "Black Flame Ritual"],
+    "drops": [
+      "70k Runes",
+      "Godskin Swaddling Cloth",
+      "Black Flame Ritual"
+    ],
     "healthPoints": "???"
   },
   {
@@ -871,7 +883,11 @@
     "region": "Altus Plateau",
     "description": "O, Death. Become my blade once more.",
     "location": "Crumbling Farum Azula",
-    "drops": ["220,000 Runes", "Other Drops", "Remembrance of the Black Blade"],
+    "drops": [
+      "220,000 Runes",
+      "Other Drops",
+      "Remembrance of the Black Blade"
+    ],
     "healthPoints": "≈10620"
   },
   {
@@ -1248,7 +1264,11 @@
     "region": "Mount Gelmir",
     "description": "A corrupted and deformed tree that lurks in Mt. Gelmir.",
     "location": "Mt. Gelmir",
-    "drops": ["18,000 Runes", "Leaden Hardtear", "Cerulean Hidden Tear"],
+    "drops": [
+      "18,000 Runes",
+      "Leaden Hardtear",
+      "Cerulean Hidden Tear"
+    ],
     "healthPoints": "≈17,428"
   },
   {
@@ -1273,7 +1293,11 @@
     "region": "Altus Plateau",
     "description": "A ghastly blood rotted tree with the face of a hundred worms.",
     "location": "Minor Erdtree (Altus Plateau)",
-    "drops": ["10000 Runes", "Crimsonspill Crystal Tear", "Speckled Hardtear"],
+    "drops": [
+      "10000 Runes",
+      "Crimsonspill Crystal Tear",
+      "Speckled Hardtear"
+    ],
     "healthPoints": "???"
   },
   {

@@ -29,15 +29,15 @@ export const StaticCard = ({}: StaticCardProps) => {
           {/* paragraph container (p) */}
           <div className="p-2 h-72">
             <p className="text-lg">
-              This Ash of War grants an armament the Magic affinity and the
-              following Skill:
+              This Ash of War grants an armament the Magic affinity
+              and the following Skill:
               <br />
               <br />
               Skill: Glintsword Arch
               <br />
-              A skill used by the enchanted Carian Knights. Small glintswords
-              form an arch and attack automatically. Attack again for a lunging
-              thrust.
+              A skill used by the enchanted Carian Knights. Small
+              glintswords form an arch and attack automatically.
+              Attack again for a lunging thrust.
               <br />
               <br />
               It can be used on all thrusting armaments.
