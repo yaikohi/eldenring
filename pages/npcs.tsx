@@ -1,19 +1,19 @@
 import type { NextPage } from 'next'
 import { Card } from '../components/Card'
 import { Navbar } from '../components/Navbar'
-import classes from '../public/data/classes.json'
+import npcs from '../public/data/npcs.json'
 
-const Classes: NextPage = () => {
+const Npcs: NextPage = () => {
   return (
     <>
-      <Navbar />
+      <Navbar></Navbar>
       <div className="flex flex-col gap-10">
-        {classes.map((c, index) => {
-          return <Card key={index} item={c} />
+        {npcs.map((npc, index) => {
+          return <Card key={index} item={npc} />
         })}
       </div>
     </>
   )
 }
 
-export default Classes
+export default Npcs

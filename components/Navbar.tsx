@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 type Props = {}
+
 const links = [
   { href: '/', name: 'Home' },
   { href: 'ammo', name: 'Ammo' },

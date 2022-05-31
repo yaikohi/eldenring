@@ -1,19 +1,19 @@
 import type { NextPage } from 'next'
 import { Card } from '../components/Card'
 import { Navbar } from '../components/Navbar'
-import classes from '../public/data/classes.json'
+import spirits from '../public/data/spirits.json'
 
-const Classes: NextPage = () => {
+const Spirits: NextPage = () => {
   return (
     <>
-      <Navbar />
+      <Navbar></Navbar>
       <div className="flex flex-col gap-10">
-        {classes.map((c, index) => {
-          return <Card key={index} item={c} />
+        {spirits.map((spirit, index) => {
+          return <Card key={index} item={spirit} />
         })}
       </div>
     </>
   )
 }
 
-export default Classes
+export default Spirits

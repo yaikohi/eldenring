@@ -6,7 +6,7 @@ import creatures from '../public/data/creatures.json'
 const Creatures: NextPage = () => {
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <div className="flex flex-col gap-10">
         {creatures.map((creature, index) => {
           return <Card key={index} item={creature} />
