@@ -6,7 +6,7 @@ import sorceries from '../public/data/sorceries.json'
 const Sorceries: NextPage = () => {
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <div className="flex flex-col gap-10">
         {sorceries.map((sorcery, index) => {
           return <Card key={index} item={sorcery} />

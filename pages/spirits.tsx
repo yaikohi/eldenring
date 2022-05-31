@@ -6,7 +6,7 @@ import spirits from '../public/data/spirits.json'
 const Spirits: NextPage = () => {
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <div className="flex flex-col gap-10">
         {spirits.map((spirit, index) => {
           return <Card key={index} item={spirit} />

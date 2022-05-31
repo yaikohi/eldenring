@@ -6,7 +6,7 @@ import bosses from '../public/data/bosses.json'
 const Home: NextPage = () => {
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <div className="flex flex-col gap-10">
         {bosses.map((boss, index) => {
           return <Card key={index} item={boss} />

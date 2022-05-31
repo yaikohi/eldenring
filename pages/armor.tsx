@@ -6,7 +6,7 @@ import armors from '../public/data/armor.json'
 const Home: NextPage = () => {
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <div className="flex flex-col gap-10">
         {armors.map((armor, index) => {
           return <Card key={index} item={armor} />

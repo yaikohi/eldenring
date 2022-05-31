@@ -6,7 +6,7 @@ import talismans from '../public/data/talismans.json'
 const Talismans: NextPage = () => {
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <div className="flex flex-col gap-10">
         {talismans.map((talisman, index) => {
           return <Card key={index} item={talisman} />

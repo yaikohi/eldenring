@@ -6,7 +6,7 @@ import weapons from '../public/data/weapons.json'
 const Weapons: NextPage = () => {
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <div className="flex flex-col gap-10">
         {weapons.map((weapon, index) => {
           return <Card key={index} item={weapon} />

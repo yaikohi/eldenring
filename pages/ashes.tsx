@@ -6,7 +6,7 @@ import ashes from '../public/data/ashes.json'
 const Home: NextPage = () => {
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <div className="flex flex-col gap-10">
         {ashes.map((ash, index) => {
           return <Card key={index} item={ash} />

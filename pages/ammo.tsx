@@ -6,7 +6,7 @@ import ammos from '../public/data/ammo.json'
 const Ammo: NextPage = () => {
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
       <div className="flex flex-col gap-10">
         {ammos.map((ammo, index) => {
           return <Card key={index} item={ammo} />
