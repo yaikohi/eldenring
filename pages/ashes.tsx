@@ -1,14 +1,36 @@
-import type { NextPage } from 'next'
+import type {
+  GetStaticProps,
+  NextPage,
+  InferGetStaticPropsType,
+} from 'next'
+import { Key } from 'react'
 import { Card } from '../components/Card'
 import { Navbar } from '../components/Navbar'
-import ashes from '../public/data/ashes.json'
+import type { Ash } from '../types/ash'
 
-const Home: NextPage = () => {
+const URL = 'https://eldenring.fanapis.com/api/ashes'
+const QUERY = '?limit=20'
+
+export const getStaticProps: GetStaticProps = async () => {
+  const res = await fetch(`${URL}${QUERY}`)
+  const resJson = await res.json()
+  const ashes = resJson.data
+
+  return {
+    props: {
+      ashes,
+    },
+  }
+}
+
+const Ashes: NextPage<Ash[]> = ({
+  ashes,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Navbar />
       <div className="flex flex-col gap-10">
-        {ashes.map((ash, index) => {
+        {ashes.map((ash: Ash, index: Key) => {
           return <Card key={index} item={ash} />
         })}
       </div>
@@ -16,4 +38,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Ashes

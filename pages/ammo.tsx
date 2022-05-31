@@ -8,9 +8,14 @@ import { Card } from '../components/Card'
 import { Navbar } from '../components/Navbar'
 import { Ammo } from '../types/ammo'
 
+const URL = 'https://eldenring.fanapis.com/api/ammos'
+const QUERY = '?limit=20'
+
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch('https://eldenring.fanapis.com/api/ammos')
-  const ammos: Ammo[] = await res.json()
+  const res = await fetch(`${URL}${QUERY}`)
+  const resJson = await res.json()
+  const ammos = resJson.data
+
   return {
     props: {
       ammos,
@@ -25,7 +30,7 @@ const Ammos: NextPage<Ammo[]> = ({
     <>
       <Navbar />
       <div className="flex flex-col gap-10">
-        {ammos.data.map((ammo: Ammo, index: Key) => {
+        {ammos.map((ammo: Ammo, index: Key) => {
           return <Card key={index} item={ammo} />
         })}
       </div>
