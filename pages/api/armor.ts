@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import armorData from '../../public/data/armor.json'
+import armorData from 'public/data/armor.json'
 
 export default function handler(
   req: NextApiRequest,

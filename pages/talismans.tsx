@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
-import { Card } from '../components/Card'
-import { Navbar } from '../components/Navbar'
-import talismans from '../public/data/talismans.json'
+import { Card } from 'components/Card'
+import { Navbar } from 'components/Navbar'
+import talismans from 'public/data/talismans.json'
 
 const Talismans: NextPage = () => {
   return (

@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
-import { Card } from '../components/Card'
-import { Navbar } from '../components/Navbar'
-import locations from '../public/data/locations.json'
+import { Card } from 'components/Card'
+import { Navbar } from 'components/Navbar'
+import locations from 'public/data/locations.json'
 
 const Locations: NextPage = () => {
   return (

@@ -4,9 +4,9 @@ import type {
   GetStaticProps,
 } from 'next'
 import { Key } from 'react'
-import { Card } from '../components/Card'
-import { Navbar } from '../components/Navbar'
-import { Armor } from '../types/armor'
+import { Card } from 'components/Card'
+import { Navbar } from 'components/Navbar'
+import { Armor } from 'types/armor'
 
 const URL = 'https://eldenring.fanapis.com/api/armors'
 const QUERY = '?limit=20'

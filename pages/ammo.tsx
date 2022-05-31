@@ -4,9 +4,9 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import { Key } from 'react'
-import { Card } from '../components/Card'
-import { Navbar } from '../components/Navbar'
-import { Ammo } from '../types/ammo'
+import { Card } from 'components/Card'
+import { Navbar } from 'components/Navbar'
+import { Ammo } from 'types/ammo'
 
 const URL = 'https://eldenring.fanapis.com/api/ammos'
 const QUERY = '?limit=20'

@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import ammoData from '../../public/data/ammo.json'
+import ammoData from 'public/data/ammo.json'
 
 export default function handler(
   req: NextApiRequest,

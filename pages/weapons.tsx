@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
-import { Card } from '../components/Card'
-import { Navbar } from '../components/Navbar'
-import weapons from '../public/data/weapons.json'
+import { Card } from 'components/Card'
+import { Navbar } from 'components/Navbar'
+import weapons from 'public/data/weapons.json'
 
 const Weapons: NextPage = () => {
   return (

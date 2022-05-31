@@ -4,9 +4,9 @@ import type {
   InferGetStaticPropsType,
 } from 'next'
 import { Key } from 'react'
-import { Card } from '../components/Card'
-import { Navbar } from '../components/Navbar'
-import type { Ash } from '../types/ash'
+import { Card } from 'components/Card'
+import { Navbar } from 'components/Navbar'
+import type { Ash } from 'types/ash'
 
 const URL = 'https://eldenring.fanapis.com/api/ashes'
 const QUERY = '?limit=20'
