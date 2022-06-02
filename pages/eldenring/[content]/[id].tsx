@@ -13,7 +13,10 @@ export const getServerSideProps: GetServerSideProps = async (
   context,
 ) => {
   const { params } = context
-  console.log(params)
+  /**
+   * TODO:
+   * Refactor if/else statements below. This is ugly.
+   */
 
   if (params !== undefined) {
     const res = await fetch(`${URL}${params.content}/${params.id}`)
