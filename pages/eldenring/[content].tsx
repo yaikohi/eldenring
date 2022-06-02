@@ -10,7 +10,7 @@ import { Navbar } from 'components/Navbar'
 import { EldenRingContent } from 'types/union'
 
 const URL = 'https://eldenring.fanapis.com/api/'
-const QUERY = '1'
+const QUERY = '10'
 
 export const getStaticPaths = async () => {
   const paths = [
@@ -57,10 +57,11 @@ const Content: NextPage<EldenRingContent[]> = ({
   return (
     <>
       <Navbar />
-      <h1>{content}</h1>
       <div className="flex flex-col gap-10">
         {data.map((item: EldenRingContent, index: Key) => {
-          return <Card key={index} item={item} />
+          return <Card onClick={() => {
+            router.push({ pathname: `${content}/${item.id}` })
+          }} key={index} item={item} />
         })}
       </div>
     </>
