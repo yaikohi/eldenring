@@ -59,9 +59,15 @@ const Content: NextPage<EldenRingContent[]> = ({
       <Navbar />
       <div className="flex flex-col gap-10">
         {data.map((item: EldenRingContent, index: Key) => {
-          return <Card onClick={() => {
-            router.push({ pathname: `${content}/${item.id}` })
-          }} key={index} item={item} />
+          return (
+            <Card
+              onClick={() => {
+                router.push({ pathname: `${content}/${item.id}` })
+              }}
+              key={index}
+              item={item}
+            />
+          )
         })}
       </div>
     </>

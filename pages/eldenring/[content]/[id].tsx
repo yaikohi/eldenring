@@ -24,7 +24,6 @@ export const getServerSideProps: GetServerSideProps = async (
     const data = resJson.data
 
     if (data !== undefined) {
-
       return {
         props: {
           data,
@@ -34,8 +33,8 @@ export const getServerSideProps: GetServerSideProps = async (
       const data = null
       return {
         props: {
-          data
-        }
+          data,
+        },
       }
     }
   } else {
@@ -52,8 +51,6 @@ const ContentById: NextPage<EldenRingContent[]> = ({
   data,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   if (data !== null) {
-
-
     return (
       <>
         <Navbar />
@@ -63,12 +60,12 @@ const ContentById: NextPage<EldenRingContent[]> = ({
       </>
     )
   } else {
-    return (<>
-      <Navbar />
-      <div className="flex flex-col gap-10">
-        Card
-      </div>
-    </>)
+    return (
+      <>
+        <Navbar />
+        <div className="flex flex-col gap-10">Card</div>
+      </>
+    )
   }
 }
 
