@@ -10,7 +10,7 @@ export const Card = ({ item, onClick }: CardProps) => {
       {/* card wrapper */}
       <div
         onClick={onClick}
-        className="drop-shadow-xl shadow-black relative flex-col max-w-[500px] mx-auto text-yellow-50 rounded-md bg-gradient-to-tr from-yellow-900 via-gray-900 to-black hover:blur-none"
+        className="drop-shadow-xl shadow-black relative flex-col max-w-[500px] min-w-[500px] text-yellow-50 rounded-md bg-gradient-to-tr from-yellow-900 via-gray-900 to-black hover:blur-none"
       >
         {/* header / title container (h1) */}
         <div className="px-5 pt-8 pb-1">
