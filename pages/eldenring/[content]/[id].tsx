@@ -9,64 +9,39 @@ import { EldenRingContent } from 'types/union'
 
 const URL = 'https://eldenring.fanapis.com/api/'
 
-export const getServerSideProps: GetServerSideProps = async (
-  context,
-) => {
-  const { params } = context
+export const getServerSideProps: GetServerSideProps = async ({
+  params,
+}) => {
   /**
-   * TODO:
-   * Refactor if/else statements below. This is ugly.
+   * Params cannot be 'null' or 'undefined' so I used assertion with `!`.
+   * Sources:
+   * 1.  https://stackoverflow.com/a/42274019/19240027
+   * 2. https://stackoverflow.com/a/70131947/19240027
    */
+  const { content, id } = params!
 
-  if (params !== undefined) {
-    const res = await fetch(`${URL}${params.content}/${params.id}`)
-    const resJson = await res.json()
-    const data = resJson.data
+  const res: EldenRingContent = await fetch(`${URL}${content}/${id}`)
+  const resJson = await res.json()
+  const data = resJson.data
 
-    if (data !== undefined) {
-      return {
-        props: {
-          data,
-        },
-      }
-    } else {
-      const data = null
-      return {
-        props: {
-          data,
-        },
-      }
-    }
-  } else {
-    const data = null
-    return {
-      props: {
-        data,
-      },
-    }
+  return {
+    props: {
+      data,
+    },
   }
 }
 
 const ContentById: NextPage<EldenRingContent[]> = ({
   data,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  if (data !== null) {
-    return (
-      <>
-        <Navbar />
-        <div className="flex flex-col gap-10">
-          <Card item={data} />
-        </div>
-      </>
-    )
-  } else {
-    return (
-      <>
-        <Navbar />
-        <div className="flex flex-col gap-10">Card</div>
-      </>
-    )
-  }
+  return (
+    <>
+      <Navbar />
+      <div className="mt-10 ">
+        <Card item={data} />
+      </div>
+    </>
+  )
 }
 
 export default ContentById
