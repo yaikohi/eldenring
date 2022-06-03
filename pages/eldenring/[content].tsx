@@ -57,7 +57,8 @@ const Content: NextPage<EldenRingContent[]> = ({
   return (
     <>
       <Navbar />
-      <div className="flex flex-col gap-10">
+
+      <div className="flex flex-row flex-wrap gap-10 mx-auto my-10">
         {data.map((item: EldenRingContent, index: Key) => {
           return (
             <Card

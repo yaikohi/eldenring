@@ -24,7 +24,7 @@ const links = [
 export const Navbar = ({}: Props) => {
   return (
     <>
-      <ul className="flex p-4 bg-slate-900 text-yellow-50">
+      <ul className="flex w-auto p-4 bg-slate-900 text-yellow-50">
         {links.map((link, index) => {
           return (
             <li key={index} className="ml-3 first:ml-0">
