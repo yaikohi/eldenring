@@ -5,8 +5,12 @@ import {
   useState,
 } from 'react'
 
+type TUser = {
+  username: string
+}
+
 type TAuthContext = {
-  user: any | null
+  user: TUser | null
   login: () => void
   logout: () => void
 }
@@ -30,10 +34,10 @@ type AuthProps = {
 }
 
 export const AuthProvider = ({ children }: AuthProps) => {
-  const [user, setUser] = useState<any | null>(null)
+  const [user, setUser] = useState<TUser | null>(null)
 
   const login = () => {
-    setUser({ username: 'erik' })
+    setUser({ username: 'ellen' })
   }
 
   const logout = () => [setUser(null)]
