@@ -7,8 +7,6 @@ import { useAuth } from 'components/AuthContext'
 const Home: NextPage = () => {
   const { user, login, logout } = useAuth()
 
-  console.log(user)
-
   return (
     <>
       <div className="flex flex-col p-4 ">
@@ -18,9 +16,7 @@ const Home: NextPage = () => {
       <main>
         <h1>
           Hello,{' '}
-          {user !== null
-            ? `${user.username} how are you doing today hehehehehe`
-            : 'wanna sign up?'}{' '}
+          {user !== null ? `${user.username}` : 'wanna sign up?'}{' '}
         </h1>
         {!user ? (
           <div>
