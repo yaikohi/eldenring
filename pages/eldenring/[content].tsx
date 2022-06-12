@@ -5,7 +5,7 @@ import type {
 } from 'next'
 import { useRouter } from 'next/router'
 import { Key } from 'react'
-import { Card } from 'components/Card'
+import { Card } from 'components/Card/Card'
 import { Navbar } from 'components/Navbar'
 import { EldenRingContent } from 'types/union'
 

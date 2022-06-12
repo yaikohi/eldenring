@@ -1,11 +1,20 @@
 import type { NextPage } from 'next'
-import { Card } from 'components/Card'
 import { Navbar } from 'components/Navbar'
-import ashes from 'public/data/ashes.json'
-import { useAuth } from 'components/AuthContext'
+import { useEffect, useState } from 'react'
+import { supabase } from 'utils/supabaseClient'
+import Authentication from 'components/Authentication'
+import Account from 'components/Account'
 
 const Home: NextPage = () => {
-  const { user, login, logout } = useAuth()
+  const [session, setSession] = useState<any>(null)
+
+  useEffect(() => {
+    setSession(supabase.auth.session())
+
+    supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session)
+    })
+  }, [])
 
   return (
     <>
@@ -13,27 +22,13 @@ const Home: NextPage = () => {
         <h1 className="text-3xl">Home page</h1>
       </div>
       <Navbar />
-      <main>
-        <h1>
-          Hello,{' '}
-          {user !== null ? `${user.username}` : 'wanna sign up?'}{' '}
-        </h1>
-        {!user ? (
-          <div>
-            <h2>Login</h2>
-            <button
-              className="w-16 h-16 max-w-xs bg-red-200 max-h-16"
-              onClick={login}
-            />
+      <main className="flex justify-center">
+        {!session ? (
+          <div className="max-w-md ">
+            <Authentication />
           </div>
         ) : (
-          <div>
-            <h2>Logout</h2>
-            <button
-              className="w-16 h-16 max-w-xs bg-red-200 max-h-16"
-              onClick={logout}
-            />
-          </div>
+          <Account key={session.user.id} session={session} />
         )}
       </main>
     </>

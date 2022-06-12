@@ -3,7 +3,7 @@ import type {
   GetServerSideProps,
   InferGetServerSidePropsType,
 } from 'next'
-import { Card } from 'components/Card'
+import { Card } from 'components/Card/Card'
 import { Navbar } from 'components/Navbar'
 import { EldenRingContent } from 'types/union'
 

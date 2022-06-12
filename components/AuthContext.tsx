@@ -15,6 +15,10 @@ type TAuthContext = {
   logout: () => void
 }
 
+type AuthProps = {
+  children: ReactNode
+}
+
 const authContextDefaultValues: TAuthContext = {
   user: null,
   login: () => {},
@@ -27,10 +31,6 @@ const AuthContext = createContext<TAuthContext>(
 
 export const useAuth = () => {
   return useContext(AuthContext)
-}
-
-type AuthProps = {
-  children: ReactNode
 }
 
 export const AuthProvider = ({ children }: AuthProps) => {
