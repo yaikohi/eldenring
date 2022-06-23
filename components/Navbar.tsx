@@ -23,20 +23,26 @@ const links = [
 export const Navbar = ({ }: Props) => {
   return (
     <>
-      <div className="w-full bg-red-200 max-w-fit group">
-        <button className="px-2 py-2 bg-fuchsia-200">navbar2</button>
-        <div>
-          <ul className="absolute hidden w-full max-w-sm p-4 group-hover:block bg-slate-900 text-yellow-50">
-            {links.map((link, index) => {
-              return (
-                <li key={index} className="ml-3 first:ml-0 hover:bg-slate-700">
-                  <Link href={`${link.href}`}>
-                    <a className="capitalize"> {link.name} </a>
-                  </Link>
-                </li>
-              )
-            })}
-          </ul>
+      <div className="max-w-md mx-auto">
+
+        <div className="flex flex-row">
+          <Link href="/"><a className="p-2 text-2xl">Profile</a></Link>
+          <div className="w-full max-w-fit group">
+            <button className="px-2 py-2 text-2xl text-white bg-slate-900">Elden Ring Stuff</button>
+            <div>
+              <ul className="absolute z-50 hidden w-full max-w-sm px-4 pt-2 overflow-y-scroll max-h-64 group-hover:block bg-slate-900 text-yellow-50">
+                {links.map((link, index) => {
+                  return (
+                    <li key={index} className="p-2 text-xl hover:bg-slate-700">
+                      <Link href={`${link.href}`}>
+                        <a className="capitalize"> {link.name} </a>
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </>

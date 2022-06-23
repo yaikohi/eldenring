@@ -19,40 +19,14 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <div className="flex flex-col p-4 ">
-        <h1 className="text-3xl">Home page</h1>
-      </div>
       <Navbar />
-      <div className="w-full bg-red-200 max-w-fit group">
-        <button className="px-2 py-2 bg-fuchsia-200">navbar2</button>
-        <div>
-          <ul className="absolute hidden w-full max-w-sm p-4 bg-blue-400 group-hover:block">
-            <li className="px-2 py-2 bg-blue-200 hover:bg-blue-900">
-              <Link href="/">
-                <a>1</a>
-              </Link>
-            </li>
-            <li className="px-2 py-2 bg-blue-200 hover:bg-blue-900">
-              <Link href="/">
-                <a>2</a>
-              </Link>
-            </li>
-            <li className="px-2 py-2 bg-blue-200 hover:bg-blue-900">
-              <Link href="/">
-                <a>3</a>
-              </Link>
-            </li>
-            <li className="px-2 py-2 bg-blue-200 hover:bg-blue-900">
-              <Link href="/">
-                <a>4</a>
-              </Link>
-            </li>
-          </ul>
-        </div>
+      <div className="flex flex-col max-w-md p-4 mx-auto">
+        <h1 className="text-3xl">Welcome</h1>
+        <p>I don&apos;t know what to put here yet</p>
       </div>
-      <main className="flex justify-center">
+      <main className="flex justify-center my-24">
         {!session ? (
-          <div className="max-w-md ">
+          <div className="max-w-xl">
             <Authentication />
           </div>
         ) : (
