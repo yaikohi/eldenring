@@ -96,7 +96,10 @@ export default function Account({ session }: unknown | any) {
         </div>
         {/* Input + label USERNAME */}
         <div className="flex flex-col py-2 overflow-x-scroll ">
-          <label className="px-4 text-sm text-white" htmlFor="username">
+          <label
+            className="px-4 text-sm text-white"
+            htmlFor="username"
+          >
             Username
           </label>
           <input
@@ -109,7 +112,10 @@ export default function Account({ session }: unknown | any) {
         </div>
         {/* Input + label WEBSITE*/}
         <div className="flex flex-col py-2 overflow-x-scroll ">
-          <label className="px-4 text-sm text-white" htmlFor="website">
+          <label
+            className="px-4 text-sm text-white"
+            htmlFor="website"
+          >
             Website
           </label>
           <input
@@ -134,7 +140,10 @@ export default function Account({ session }: unknown | any) {
         </div>
 
         <div className="p-2 text-white rounded-xl ">
-          <button className="" onClick={() => supabase.auth.signOut()}>
+          <button
+            className=""
+            onClick={() => supabase.auth.signOut()}
+          >
             Sign Out
           </button>
         </div>
