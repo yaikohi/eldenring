@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 type Props = {}
 
-const links = [
+const eldenRingLinks = [
   { href: '/eldenring/ammos', name: 'Ammo' },
   { href: '/eldenring/armors', name: 'Armor' },
   { href: '/eldenring/ashes', name: 'Ashes of War' },
@@ -24,16 +24,22 @@ export const Navbar = ({ }: Props) => {
   return (
     <>
       <div className="max-w-md mx-auto">
-
         <div className="flex flex-row">
-          <Link href="/"><a className="p-2 text-2xl">Profile</a></Link>
+          <Link href="/">
+            <a className="p-2 text-2xl">Profile</a>
+          </Link>
           <div className="w-full max-w-fit group">
-            <button className="px-2 py-2 text-2xl text-white bg-slate-900">Elden Ring Stuff</button>
+            <button className="px-2 py-2 text-2xl rounded-lg group-hover:rounded-t-lg group-hover:rounded-b-none dark:text-white bg-slate-200 dark:bg-slate-900">
+              Elden Ring
+            </button>
             <div>
-              <ul className="absolute z-50 hidden w-full max-w-sm px-4 pt-2 overflow-y-scroll max-h-64 group-hover:block bg-slate-900 text-yellow-50">
-                {links.map((link, index) => {
+              <ul className="absolute z-50 hidden w-full max-w-sm px-4 pt-2 overflow-y-scroll max-h-64 group-hover:block bg-slate-200 dark:bg-slate-900 dark:text-yellow-50">
+                {eldenRingLinks.map((link, index) => {
                   return (
-                    <li key={index} className="p-2 text-xl hover:bg-slate-700">
+                    <li
+                      key={index}
+                      className="p-3 text-xl rounded-md hover:bg-slate-300 dark:hover:bg-slate-700"
+                    >
                       <Link href={`${link.href}`}>
                         <a className="capitalize"> {link.name} </a>
                       </Link>

@@ -64,14 +64,17 @@ export default function Account({ session }: unknown | any) {
         let { error } = await supabase
           .from('profiles')
           .upsert(updates, {
-            returning: 'minimal', // Don't return the value after inserting
+            // Don't return the value after updating the profile with the 'updates' object;; minimal
+            returning: 'minimal',
           })
 
+        // If supabase returns an error;
         if (error) {
           throw error
         }
       }
     } catch (error: unknown | any) {
+      // Show error message if error
       alert(error.message)
     } finally {
       setLoading(false)
@@ -79,15 +82,15 @@ export default function Account({ session }: unknown | any) {
   }
 
   return (
-    <div className="w-full max-w-sm px-4 bg-black">
+    <div className="w-full max-w-sm px-4 bg-slate-200 dark:bg-slate-900">
       <div className="flex flex-col min-w-full ">
         {/* Input + label EMAIL */}
         <div className="flex flex-col py-2 overflow-x-scroll ">
-          <label className="px-4 text-sm text-white" htmlFor="email">
+          <label className="px-4 text-sm dark:text-white" htmlFor="email">
             Email
           </label>
           <input
-            className="px-3 py-2 font-sans text-base transition ease-in-out rounded-lg disabled:-500 disabled:text-white focus:text-slate-500 focus: focus:border-yellow-900 focus:outline-none"
+            className="px-3 py-2 font-sans text-base transition ease-in-out rounded-lg disabled:-500 dark:disabled:text-white focus:text-slate-900 dark:focus:text-slate-500 focus:border-yellow-900 focus:outline-none"
             id="email"
             type="text"
             value={session.user.email}
@@ -97,13 +100,13 @@ export default function Account({ session }: unknown | any) {
         {/* Input + label USERNAME */}
         <div className="flex flex-col py-2 overflow-x-scroll ">
           <label
-            className="px-4 text-sm text-white"
+            className="px-4 text-sm dark:text-white"
             htmlFor="username"
           >
             Username
           </label>
           <input
-            className="px-3 py-2 font-sans text-base transition ease-in-out rounded-lg disabled:-500 disabled:text-white focus:text-slate-500 focus: focus:border-yellow-900 focus:outline-none"
+            className="px-3 py-2 font-sans text-base transition ease-in-out rounded-lg disabled:-500 dark:disabled:text-white focus:text-slate-900 dark:focus:text-slate-500 focus: focus:border-yellow-900 focus:outline-none"
             id="username"
             type="text"
             value={username || ''}
@@ -113,13 +116,13 @@ export default function Account({ session }: unknown | any) {
         {/* Input + label WEBSITE*/}
         <div className="flex flex-col py-2 overflow-x-scroll ">
           <label
-            className="px-4 text-sm text-white"
+            className="px-4 text-sm dark:text-white"
             htmlFor="website"
           >
             Website
           </label>
           <input
-            className="px-3 py-2 font-sans text-base transition ease-in-out rounded-lg disabled:-500 disabled:text-white focus:text-slate-500 focus: focus:border-yellow-900 focus:outline-none"
+            className="px-3 py-2 font-sans text-base transition ease-in-out rounded-lg disabled:-500 dark:disabled:text-white focus:focus:text-slate-900 dark:focus:text-slate-500 focus: focus:border-yellow-900 focus:outline-none"
             id="website"
             type="website"
             value={website || ''}
@@ -127,25 +130,27 @@ export default function Account({ session }: unknown | any) {
           />
         </div>
 
-        <div className="p-2 text-white rounded-xl ">
-          <button
-            className=""
-            onClick={() =>
-              updateProfile({ username, website, avatar_url })
-            }
-            disabled={loading}
-          >
-            {loading ? 'Loading ...' : 'Update'}
-          </button>
-        </div>
+        <div className="my-5">
+          <div className="p-2 dark:text-white bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 hover:bg-slate-300 rounded-xl ">
+            <button
+              className="p-2"
+              onClick={() =>
+                updateProfile({ username, website, avatar_url })
+              }
+              disabled={loading}
+            >
+              {loading ? 'Loading ...' : 'Update'}
+            </button>
+          </div>
 
-        <div className="p-2 text-white rounded-xl ">
-          <button
-            className=""
-            onClick={() => supabase.auth.signOut()}
-          >
-            Sign Out
-          </button>
+          <div className="p-2 mt-2 dark:text-white rounded-xl bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 hover:bg-slate-300">
+            <button
+              className="p-2 "
+              onClick={() => supabase.auth.signOut()}
+            >
+              Sign Out
+            </button>
+          </div>
         </div>
       </div>
     </div>

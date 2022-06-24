@@ -22,7 +22,7 @@ class MyDocument extends Document {
         <Head>
           <Favicon />
         </Head>
-        <body>
+        <body className="w-screen h-screen bg-gradient-to-r from-stone-400 to-slate-200">
           <Main />
           <NextScript />
         </body>

@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 import { supabase } from 'utils/supabaseClient'
 import Authentication from 'components/Authentication'
 import Account from 'components/Account'
-import Link from 'next/link'
 
 const Home: NextPage = () => {
   const [session, setSession] = useState<any>(null)
@@ -12,7 +11,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     setSession(supabase.auth.session())
 
-    supabase.auth.onAuthStateChange((_event, session) => {
+    supabase.auth.onAuthStateChange((_event: any, session: any) => {
       setSession(session)
     })
   }, [])
